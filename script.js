@@ -14,19 +14,23 @@
 // Creo la Funzione per Generare numeri random, il range e la quantità da generare le imposto con variabili locali
 function generatoreRandom(minOutput, maxOutput, min, max){
 
-var minOutput, maxOutput, n, min, max;
+var minOutput, maxOutput, n, min, max, myArray;
+
+myArray = [];
 
   for (var i = minOutput; i<=maxOutput; i++){
 
     n = Math.floor(Math.random() * (max - min) + min);
-    console.log(n);
+    console.log("Numero random generato dal pc; ", n);
+
+    myArray.push(n);
+
   }
-  return n;
+  return myArray;
 }
 
 
 
 
 
-
-generatoreRandom(1, 16, 1, 100)
+console.log("Array generato dal pc ", generatoreRandom(1, 16, 1, 100));
