@@ -31,27 +31,39 @@ array = [];
 
 
 // Questa funzione deve chiedere un numero da 1 a 100 fino a quando l'utente non avrà digitato un numero presente nell'array generato in precedenza
-function inputUtente(input, array){
+function inputUtente(array, input){
 
-  // for( var i = 0; i<=array.length; i++){
-  //
-  //   var penetrazion = true;
-  //
-  //   while (penetrazion == true) {
-  //     var input;
-  //
-  //     if (input === array[i]) {
-  //         penetrazion = false;
-  //     }
-  //     console.log("aaaaaa");
-  //   }
-  // }
+  var i = 0;
+
+  while(i<array.length){
+
+    var penetrazion = true;
+
+    while(penetrazion == true){
+      numUtente;
+      if (input == array[i]) {
+        penetrazion = false;
+        console.log("mina  ", array[i]);
+      }
+
+      console.log("non mina");
+
+      return true;
+    }
+
+    console.log("Stampo elementi Array ", array[i]);
+
+    i++
+  }
+
 }
 
 
 
 
 var sequenzaRandom = generatoreRandom(1, 16, 1, 100);
+
+
 
 var numUtente = parseInt(prompt('Inserisci un numero da 1 a 100. Attento alle mine!'));
 
@@ -61,6 +73,16 @@ console.log("Numero inserito dall'utente ",numUtente);
 
 // Log dei numeri generati in base alla funzione generatoreRandom;
 console.log("Array generato dal pc ", sequenzaRandom);
+
+console.log("Lunghezza array generato dal pc ", sequenzaRandom.length);
+
+inputUtente(sequenzaRandom, numUtente);
+
+
+
+
+
+
 
 
 // inputUtente(numUtente, sequenzaRandom);
