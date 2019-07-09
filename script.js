@@ -11,26 +11,56 @@
 // Con difficoltà 0=> da 1 a 100, con difficoltà 1 => da 1 a 80 con difficoltà 2=> da 1 a 50
 
 
-// Creo la Funzione per Generare numeri random, il range e la quantità da generare le imposto con variabili locali
-function generatoreRandom(minOutput, maxOutput, min, max){
+// Creo la Funzione per Generare numeri random, e li pusha in un Array, il range e la quantità da generare le imposto con variabili locali
+function generatoreRandom(minOutput, maxOutput, min, max, array){
 
-var minOutput, maxOutput, n, min, max, myArray;
+var minOutput, maxOutput, n, min, max, array;
 
-myArray = [];
+array = [];
 
   for (var i = minOutput; i<=maxOutput; i++){
 
     n = Math.floor(Math.random() * (max - min) + min);
-    console.log("Numero random generato dal pc; ", n);
+    console.log("Numero ", i, " random generato dal pc; ", n);
 
-    myArray.push(n);
+    array.push(n);
 
   }
-  return myArray;
+  return array;
+}
+
+
+// Questa funzione deve chiedere un numero da 1 a 100 fino a quando l'utente non avrà digitato un numero presente nell'array generato in precedenza
+function inputUtente(input, array){
+
+  // for( var i = 0; i<=array.length; i++){
+  //
+  //   var penetrazion = true;
+  //
+  //   while (penetrazion == true) {
+  //     var input;
+  //
+  //     if (input === array[i]) {
+  //         penetrazion = false;
+  //     }
+  //     console.log("aaaaaa");
+  //   }
+  // }
 }
 
 
 
 
+var sequenzaRandom = generatoreRandom(1, 16, 1, 100);
 
-console.log("Array generato dal pc ", generatoreRandom(1, 16, 1, 100));
+var numUtente = parseInt(prompt('Inserisci un numero da 1 a 100. Attento alle mine!'));
+
+// inputUtente(numUtente, sequenzaRandom);
+
+console.log("Numero inserito dall'utente ",numUtente);
+
+// Log dei numeri generati in base alla funzione generatoreRandom;
+console.log("Array generato dal pc ", sequenzaRandom);
+
+
+// inputUtente(numUtente, sequenzaRandom);
