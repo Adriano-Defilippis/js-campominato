@@ -67,7 +67,7 @@ function in_array(input, a){
 // Esecuzione del codice
 var sequenzaRandom = generatoreRandom(1, 16, 1, 100);
 
-var input = parseInt(prompt('Inserisci un numero da 1 a 100. Attento alle mine!'));
+// var input = parseInt(prompt('Inserisci un numero da 1 a 100. Attento alle mine!'));
 
 
 // Log dei numeri generati in base alla funzione generatoreRandom;
@@ -84,14 +84,16 @@ while (penetrazion == true){
   input = parseInt(prompt('Inserisci un numero da 1 a 100. Attento alle mine!'));
 
   if(in_array(input, sequenzaRandom)) {
-    alert('presente');
 
-    console.log(input, ' presente');
+    console.log(input, ' Hai pestato una mina');
+
+    alert('Mina!');
+
 
     penetrazion = false;
   }else{
-    alert('elemento non trovato');
-    console.log(input, ' elemento non trovato');
+    alert('Bravo,! puoi proseguire!');
+    console.log(input, ' vai avanti');
     penetrazion = true;
   }
 }
