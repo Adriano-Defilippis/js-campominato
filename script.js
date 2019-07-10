@@ -15,19 +15,19 @@
 // Creo la Funzione per Generare numeri random, e li pusha in un Array, il range e la quantità da generare le imposto con variabili locali
 function generatoreRandom(minOutput, maxOutput, min, max, array){
 
-var minOutput, maxOutput, n, min, max, array;
+  var minOutput, maxOutput, n, min, max, array;
 
-array = [];
+  array = [];
 
   for (var i = minOutput; i<=maxOutput; i++){
 
-    n = Math.floor(Math.random() * (max - min) + min);
-    console.log("Numero ", i, " random generato dal pc; ", n);
+  n = Math.floor(Math.random() * (max - min) + min);
+      console.log("Numero ", i, " random generato dal pc; ", n);
 
-    array.push(n);
+  array.push(n);
 
   }
-  return array;
+    return array;
 }
 
 
@@ -39,16 +39,16 @@ function tentativiMax(max, array){
 
   console.log(array.join(","));
 
-
   for (i = 0; i <= max; i++){
 
     input = parseInt(prompt('Inserisci un numero da 1 a 100. Attento alle mine!'));
-
 
   }
 
 }
 
+
+// Creo la funzione che restituisce un valore booleano in caso di corrispondenza tra input e elemento nell'Array
 function in_array(input, a){
     //input => VALORE CERCATO
     //a => ARRAY
@@ -58,8 +58,6 @@ function in_array(input, a){
     }
     return false;
   }
-
-
 
 
 
